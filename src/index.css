@@ -1,5 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background-color: #191a1c;
   scroll-behavior: smooth;
-  transition: 0.6s ease;
+  max-width: 100%;
 }

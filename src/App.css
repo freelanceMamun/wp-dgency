@@ -5,3 +5,19 @@
 .animate__animated.animate__fadeInLeft {
   animation-duration: 1.5s;
 }
+
+.fade-in-section {
+  opacity: 0;
+  transform: scale(0.8);
+  visibility: hidden;
+  transition: opacity 0.4s ease-out, transform 0.8s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+  transform: scale(1);
+  transition: opacity 0.4s ease-out, transform 0.8s ease-out;
+}
