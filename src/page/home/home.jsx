@@ -15,7 +15,6 @@ import Team from '../../components/team/team';
 import Testimonials from '../../components/Testimonials/testimonials';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import About from '../../components/about/About';
 
 const Home = () => {
   const { domRef, isVisible, show, setShowFun } = useContext(MainContent);
@@ -72,8 +71,6 @@ const Home = () => {
       </section>
 
       {/* A======== About Section  ========= */}
-
-      <About></About>
 
       {/* ===== About Section end ====== */}
 
