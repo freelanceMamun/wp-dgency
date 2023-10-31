@@ -14,6 +14,8 @@ body {
 
 #about_main_pages {
   overflow-x: hidden;
+  padding-top: 200px;
+  padding-bottom: 150px;
 }
 
 #about_main_pages .bg-gracolor {
@@ -839,7 +841,6 @@ body {
     font-size: 36px;
   }
 
-  
   #about_main_pages .about_heading_title_tow h3 {
     text-align: center;
     font-size: 36px;
@@ -970,8 +971,9 @@ body {
     margin: auto;
   }
   #about_main_pages .about_right_content_inn .about_counter_sect {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
+    gap: 10px;
   }
   #about_main_pages .about_counter_sect > div {
     z-index: 9;
@@ -987,6 +989,10 @@ body {
 }
 
 @media screen and (min-width: 200px) and (max-width: 540px) {
+  #about_main_pages {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   #about_main_pages .about_right_Content_feature {
     position: relative;
     max-width: 100%;

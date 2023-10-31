@@ -3,7 +3,13 @@ import img1 from '../../assets/images/Rectangle 4.png';
 import Img32 from '../../assets/images/Rectangle 728.png';
 import CountUp from 'react-countup';
 import MoreIcon from '../../assets/images/Learn More icon.png';
-import { happyClient, servicesData } from '../../db/db';
+import {
+  happyClient,
+  servicesData,
+  dataMeet,
+  TeamMemberData,
+  technology,
+} from '../../db/db';
 import { useContext } from 'react';
 import { MainContent } from '../../context/context';
 import Contact from '../../components/Contact/Contact';
@@ -15,12 +21,14 @@ import Team from '../../components/team/team';
 import Testimonials from '../../components/Testimonials/testimonials';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import About from '../../components/about/About';
+import Project from '../../components/Project/projecs';
 
 const Home = () => {
   const { domRef, isVisible, show, setShowFun } = useContext(MainContent);
 
   return (
-    <div className={` index-pages`} id="index_pages">
+    <div className={`index-pages`} id="index_pages">
       <section className="ind_hero_area">
         <div className="banner_container">
           <div
@@ -116,7 +124,9 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="our_services_container">
+        <About></About>
+
+        <div id="services" className="our_services_container">
           <div className="container">
             <div className="Services_heading">
               <div className="heading_service">
@@ -251,19 +261,33 @@ const Home = () => {
 
       {/* ================== */}
 
-      <SliderP backgroundImage={bgImg} headText={'Meet Our Belivers'}></SliderP>
+      <SliderP
+        dataMeet={dataMeet}
+        backgroundImage={bgImg}
+        headText={'Meet Our Belivers'}
+      ></SliderP>
 
       {/* ==== Catagories  ======== */}
 
       {/* ======== Catagories ===== */}
 
       {/* ========= Team Section  ============ */}
-      <Team></Team>
-      {/* ========= Team Section  ============ */}
+      <Team TeamMemberData={TeamMemberData}></Team>
+      {/* ========= Team Section  End ============ */}
 
-      <SliderP backgroundImage={bgimg1} headText={'Technologies'}></SliderP>
+      {/* ========  Project Section  =========== */}
 
-      <Testimonials></Testimonials>
+      <Project></Project>
+
+      {/* ======= Project Section End  ========== */}
+      {/* =================== Technology Section ============== */}
+      <SliderP
+        dataMeet={technology}
+        backgroundImage={bgimg1}
+        headText={'Technologies'}
+      ></SliderP>
+      {/* =================== Technology Section ============== */}
+      <Testimonials TeamMemberData={TeamMemberData}></Testimonials>
 
       {/* ===== Contact Section  ===== */}
       <Contact></Contact>

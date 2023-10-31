@@ -1,5 +1,7 @@
 import Slider from 'react-slick';
+import { useContext } from 'react';
 
+import { MainContent } from '../../context/context';
 var settings = {
   infinite: true,
   speed: 500,
@@ -19,6 +21,7 @@ var settings = {
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
+        autoplay: true,
       },
     },
     {
@@ -26,12 +29,16 @@ var settings = {
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
+        arrows: true,
+        autoplay: true,
       },
     },
   ],
 };
 
-const Testimonials = () => {
+const Testimonials = ({ TeamMemberData }) => {
+  const { domRefOne, isVisibleOne } = useContext(MainContent);
+
   return (
     <section className="clinet_review">
       <div className="client_review_container">
@@ -47,189 +54,54 @@ const Testimonials = () => {
             </div>
           </div>
 
-          <div className="client_testimonials">
+          <div
+            ref={domRefOne}
+            className={`fade-in-sectionOne ${
+              isVisibleOne ? 'is-visibleOne' : ''
+            } client_testimonials`}
+          >
             <div className="row mt-5 pt-4 Client_memberSlide">
               <Slider {...settings}>
-                <div className="col-lg-3">
-                  <div className="tema_member_container">
-                    <div className="tem-member_content">
-                      <div className="images">
-                        <img src="assets/images/Rectangle 18 (1).png" alt="" />
-                      </div>
-                      <div className="member_content">
-                        <h4>Mason Campbell</h4>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. A fringilla at gravida justo, felis risus
-                          ullamcorper augue tempus. Nam hac.
-                        </p>
-                      </div>
-                      <div className="clinet_ratting">
-                        <ul>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-3">
-                  <div className="tema_member_container">
-                    <div className="tem-member_content">
-                      <div className="images">
-                        <img src="assets/images/Rectangle 18 (2).png" alt="" />
-                      </div>
-                      <div className="member_content">
-                        <h4>Vanessa Laird</h4>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. A fringilla at gravida justo, felis risus
-                          ullamcorper augue tempus. Nam hac.
-                        </p>
-                      </div>
-                      <div className="clinet_ratting">
-                        <ul>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                        </ul>
+                {TeamMemberData?.map((item) => {
+                  return (
+                    <div key={item.id} className="col-lg-3">
+                      <div className="tema_member_container">
+                        <div className="tem-member_content">
+                          <div className="images">
+                            <img src={item.img} alt="Testimonials-Author" />
+                          </div>
+                          <div className="member_content">
+                            <h4>{item.name}</h4>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit. A fringilla at gravida justo, felis risus
+                              ullamcorper augue tempus. Nam hac.
+                            </p>
+                          </div>
+                          <div className="clinet_ratting">
+                            <ul>
+                              <li>
+                                <i className="fa-solid fa-star"></i>
+                              </li>
+                              <li>
+                                <i className="fa-solid fa-star"></i>
+                              </li>
+                              <li>
+                                <i className="fa-solid fa-star"></i>
+                              </li>
+                              <li>
+                                <i className="fa-solid fa-star"></i>
+                              </li>
+                              <li>
+                                <i className="fa-solid fa-star"></i>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="col-lg-3">
-                  <div className="tema_member_container">
-                    <div className="tem-member_content">
-                      <div className="images">
-                        <img src="assets/images/Rectangle 19.png" alt="" />
-                      </div>
-                      <div className="member_content">
-                        <h4>Irea Evans</h4>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. A fringilla at gravida justo, felis risus
-                          ullamcorper augue tempus. Nam hac.
-                        </p>
-                      </div>
-                      <div className="clinet_ratting">
-                        <ul>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-3">
-                  <div className="tema_member_container">
-                    <div className="tem-member_content">
-                      <div className="images">
-                        <img src="assets/images/Rectangle 18 (1).png" alt="" />
-                      </div>
-                      <div className="member_content">
-                        <h4>Mason Campbell</h4>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. A fringilla at gravida justo, felis risus
-                          ullamcorper augue tempus. Nam hac.
-                        </p>
-                      </div>
-                      <div className="clinet_ratting">
-                        <ul>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-3">
-                  <div className="tema_member_container">
-                    <div className="tem-member_content">
-                      <div className="images">
-                        <img src="assets/images/Rectangle 18 (1).png" alt="" />
-                      </div>
-                      <div className="member_content">
-                        <h4>Vanessa Laird</h4>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. A fringilla at gravida justo, felis risus
-                          ullamcorper augue tempus. Nam hac.
-                        </p>
-                      </div>
-                      <div className="clinet_ratting">
-                        <ul>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                          <li>
-                            <i className="fa-solid fa-star"></i>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  );
+                })}
               </Slider>
             </div>
           </div>

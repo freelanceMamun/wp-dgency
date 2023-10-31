@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import { StateContext } from './context/context.jsx';
 import { BrowserRouter } from 'react-router-dom';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <StateContext>

@@ -2,12 +2,13 @@ import '../../../styles/index.css';
 
 import Slider from 'react-slick';
 var settings = {
-  dots: true,
   infinite: false,
   speed: 500,
   slidesToShow: 5,
   slidesToScroll: 4,
   initialSlide: 0,
+  arrows: true,
+
   responsive: [
     {
       breakpoint: 1024,
@@ -15,7 +16,6 @@ var settings = {
         slidesToShow: 4,
         slidesToScroll: 3,
         infinite: true,
-        dots: true,
       },
     },
     {
@@ -24,20 +24,22 @@ var settings = {
         slidesToShow: 3,
         slidesToScroll: 1,
         initialSlide: 2,
+        arrows: true,
       },
     },
     {
       breakpoint: 640,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
+        arrows: true,
         slidesToScroll: 1,
       },
     },
   ],
 };
-const SliderP = ({ backgroundImage }) => {
+const SliderP = ({ backgroundImage, dataMeet, headText }) => {
   return (
-    <section className="in_client">
+    <section className="in_client mt-5 pb-4">
       <div
         className="our_clientInner"
         style={{ backgroundImage: `url('${backgroundImage}')` }}
@@ -53,42 +55,21 @@ const SliderP = ({ backgroundImage }) => {
               data-aos-duration="2000"
             >
               <h1>
-                Meet Our <span> Belivers </span>
+                <span> {headText} </span>
               </h1>
             </div>
           </div>
           <div className="row mt-5 our_client">
             <Slider {...settings}>
-              <div className="col-lg-2">
-                <div className="clinet_brand">
-                  <img src="assets/images/FPmZo.png" alt="" />
-                </div>
-              </div>
-              <div className="col-lg-2">
-                <div className="clinet_brand">
-                  <img src="assets/images/MGV5G.png" alt="" />
-                </div>
-              </div>
-              <div className="col-lg-2">
-                <div className="clinet_brand">
-                  <img src="assets/images/WKuV6.png" alt="" />
-                </div>
-              </div>
-              <div className="col-lg-2">
-                <div className="clinet_brand">
-                  <img src="assets/images/FPmZo.png" alt="" />
-                </div>
-              </div>
-              <div className="col-lg-2">
-                <div className="clinet_brand">
-                  <img src="assets/images/MGV5G.png" alt="" />
-                </div>
-              </div>
-              <div className="col-lg-2">
-                <div className="clinet_brand">
-                  <img src="assets/images/WKuV6.png" alt="" />
-                </div>
-              </div>
+              {dataMeet.map((item) => {
+                return (
+                  <div key={item.id} className="col-lg-2">
+                    <div className="clinet_brand">
+                      <img src={item.img} alt="" />
+                    </div>
+                  </div>
+                );
+              })}
             </Slider>
           </div>
         </div>

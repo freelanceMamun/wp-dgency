@@ -367,7 +367,7 @@ body {
 .Inde_Catagoires_inner ul li button {
   background: #ffffff;
   box-shadow: inset 0 9px 7px -9px #191a1c;
-  font-size: 20px;
+  font-size: 15px;
   border: none;
   width: 180px;
   border-radius: 3px !important;
@@ -375,6 +375,7 @@ body {
   border: 1px solid #f4dd62;
   font-weight: 600;
   margin: auto;
+  padding: 4px;
 }
 .Inde_Catagoires_inner ul li .nav-link.active {
   background: #191a1c;
@@ -541,7 +542,7 @@ body {
 }
 
 .project_row_container {
-  max-width: 1090px;
+  max-width: 1190px;
   margin-top: 4rem;
   margin-left: auto;
   margin-right: auto;
@@ -760,6 +761,7 @@ body {
 #index_pages .client_testimonials .images img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 #index_pages .client_testimonials .Hero_PrevBtn {
   display: none !important;

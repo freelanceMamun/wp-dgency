@@ -1,4 +1,5 @@
 import Slider from 'react-slick';
+
 var settings = {
   infinite: true,
   speed: 500,
@@ -29,7 +30,8 @@ var settings = {
     },
   ],
 };
-const Team = () => {
+
+const Team = ({ TeamMemberData }) => {
   return (
     <section className="Team_member">
       <div className="ind_team_member pt-3 pb-3">
@@ -47,36 +49,41 @@ const Team = () => {
           <div className="tema_member_inner">
             <div className="row mt-5 pt-4 team_memberSlide">
               <Slider {...settings}>
-                <div className="col-lg-4">
-                  <div className="tema_member_container">
-                    <div className="tem-member_content">
-                      <div className="images">
-                        <img src="assets/images/Mask (1).png" alt="" />
-                      </div>
-                      <div className="member_content">
-                        <h4>Mason Campbell</h4>
-                        <p>UI DESIGNER</p>
+                {TeamMemberData.map((item) => {
+                  return (
+                    <div key={item.id} className="col-lg-4">
+                      <div className="tema_member_container">
+                        <div className="tem-member_content">
+                          <div className="images">
+                            <img src={item.img} alt="" />
+                          </div>
+                          <div className="member_content">
+                            <h4>Mason Campbell</h4>
+                            <p>UI DESIGNER</p>
+                          </div>
+                        </div>
+                        <div className="taem_social">
+                          <div className="social_media">
+                            <a href="#">
+                              <i className="fa-brands fa-twitter"></i>
+                            </a>
+                          </div>
+                          <div className="social_media">
+                            <a href="#">
+                              <i className="fa-brands fa-square-facebook"></i>
+                            </a>
+                          </div>
+                          <div className="social_media">
+                            <a href="#">
+                              <i className="fa-brands fa-dribbble"></i>
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div className="taem_social">
-                      <div className="social_media">
-                        <a href="#">
-                          <i className="fa-brands fa-twitter"></i>
-                        </a>
-                      </div>
-                      <div className="social_media">
-                        <a href="#">
-                          <i className="fa-brands fa-square-facebook"></i>
-                        </a>
-                      </div>
-                      <div className="social_media">
-                        <a href="#">
-                          <i className="fa-brands fa-dribbble"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  );
+                })}
+
                 <div className="col-lg-4">
                   <div className="tema_member_container">
                     <div className="tem-member_content">

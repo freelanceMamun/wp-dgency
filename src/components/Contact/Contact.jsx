@@ -1,7 +1,7 @@
 import bgimg from '../../assets/images/Mask group.png';
 const Contact = () => {
   return (
-    <section className="indContact">
+    <section className="indContact" id="indContact">
       <div className="contact_inner pb-3">
         <div className="container">
           <div className="responsive_contact-heading">

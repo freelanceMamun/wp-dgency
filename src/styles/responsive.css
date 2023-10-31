@@ -2,7 +2,7 @@
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .nav_inner_desk {
     position: initial;
-    background-color: #fff;
+
     border-radius: 0px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -33,7 +33,7 @@
 @media screen and (min-width: 540px) and (max-width: 768px) {
   .nav_inner_desk {
     position: initial;
-    background-color: #fff;
+
     border-radius: 0px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -64,7 +64,7 @@
 @media screen and (min-width: 100px) and (max-width: 540px) {
   .nav_inner_desk {
     position: initial;
-    background-color: #fff;
+
     border-radius: 0px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -123,7 +123,7 @@
     width: 95%;
     height: 70px;
     box-shadow: 0px 5px 20px #302f2f;
-    background-image: url("../images/icon/div\ \(2\).png");
+    background-image: url('../images/icon/div\ \(2\).png');
   }
   .inproject_achieve .row {
     width: 95%;
@@ -131,7 +131,7 @@
   }
 
   .responsive_pd {
-    padding: 0;
+    padding: 0 !important;
   }
   .in_project_services {
     background-size: cover;
@@ -163,7 +163,7 @@
   }
 
   .our_services_container {
-    background-image: url("../images/icon/div\ \(2\).png");
+    background-image: url('../images/icon/div\ \(2\).png');
   }
 
   .services_minheading h1 {
@@ -181,7 +181,7 @@
     left: 15px;
   }
   .tema_member_container {
-    width: 360px;
+    width: 310px;
   }
 
   .team_memberSlide .Hero_NextBtn {
@@ -221,7 +221,7 @@
   }
 
   .Specialized_container {
-    background-image: url("../images/icon/div\ \(3\).png");
+    background-image: url('../images/icon/div\ \(3\).png');
     background-repeat: no-repeat;
   }
   .ind_Specialized_services .services_minheading h1 {
@@ -260,7 +260,7 @@
   .contact_rows .client_heading {
     display: none;
   }
-  .contact_right_content {
+  #index_pages .contact_right_content {
     width: 100%;
     height: 500px;
     border-top-right-radius: 50px;
@@ -280,6 +280,12 @@
 
   .contactForm {
     margin-top: 2rem;
+  }
+  header .nav_inner_desk .nav-link.active {
+    color: black !important;
+  }
+  header .nav_inner_desk .nav-link {
+    color: black !important;
   }
 }
 

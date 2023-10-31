@@ -21,3 +21,19 @@
   transform: scale(1);
   transition: opacity 0.4s ease-out, transform 0.8s ease-out;
 }
+
+.fade-in-sectionOne {
+  opacity: 0;
+  transform: translateY(50px);
+  visibility: hidden;
+  transition: opacity 0.4s ease-out, transform 0.8s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-in-sectionOne.is-visibleOne {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+  transform: translateY(0px);
+  transition: opacity 0.4s ease-out, transform 0.8s ease-out;
+}
