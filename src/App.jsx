@@ -1,8 +1,8 @@
-import './App.css';
-import 'animate.css';
-import Home from './page/home/home';
+import "./App.css";
+import "animate.css";
+import Home from "./page/home/home";
 
-import './styles/responsive.css';
+import "./styles/responsive.css";
 
 function App() {
   return (
