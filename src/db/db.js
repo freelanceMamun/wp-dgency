@@ -139,9 +139,10 @@ export const dataMeet = [
     img: brandImg1,
   },
   {
-    id: 6,
-    img: brandImg2,
+    id: 1,
+    img: brandImg,
   },
+  
 ];
 
 // ==========  Testimonials Section ========== Data import

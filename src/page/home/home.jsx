@@ -3,7 +3,7 @@ import img1 from "../../assets/images/Rectangle 4.png";
 import Img32 from "../../assets/images/Rectangle 728.png";
 import CountUp from "react-countup";
 import MoreIcon from "../../assets/images/Learn More icon.png";
-import { happyClient, servicesData, teamData } from "../../db/db";
+import { happyClient, servicesData, teamData, dataMeet} from "../../db/db";
 import { useContext } from "react";
 import { MainContent } from "../../context/context";
 import Contact from "../../components/Contact/Contact";
@@ -254,7 +254,7 @@ const Home = () => {
 
       {/* ================== */}
 
-      <SliderP backgroundImage={bgImg} headText={"Meet Our Belivers"}></SliderP>
+      <SliderP dataMeet={dataMeet} backgroundImage={bgImg} headText={"Meet Our Belivers"}></SliderP>
 
       {/* ==== Catagories  ======== */}
 
@@ -264,7 +264,7 @@ const Home = () => {
       <Team></Team>
       {/* ========= Team Section  ============ */}
 
-      <SliderP backgroundImage={bgimg1} headText={"Technologies"}></SliderP>
+      {/* <SliderP backgroundImage={bgimg1} headText={"Technologies"}></SliderP> */}
 
       <Testimonials teamData={teamData}></Testimonials>
 

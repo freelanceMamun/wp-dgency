@@ -37,7 +37,7 @@ var settings = {
     },
   ],
 };
-const SliderP = ({ backgroundImage }) => {
+const SliderP = ({ backgroundImage,dataMeet }) => {
   return (
     <section className="in_client">
       <div
@@ -61,36 +61,14 @@ const SliderP = ({ backgroundImage }) => {
           </div>
           <div className="row mt-5 our_client">
             <Slider {...settings}>
-              <div className="col-lg-2">
+              {dataMeet.map((item)=>{
+                return  <div key={item.id} className="col-lg-2">
                 <div className="clinet_brand">
-                  <img src="assets/images/FPmZo.png" alt="" />
+                  <img src={item.img} alt="" />
                 </div>
               </div>
-              <div className="col-lg-2">
-                <div className="clinet_brand">
-                  <img src="assets/images/MGV5G.png" alt="" />
-                </div>
-              </div>
-              <div className="col-lg-2">
-                <div className="clinet_brand">
-                  <img src="assets/images/WKuV6.png" alt="" />
-                </div>
-              </div>
-              <div className="col-lg-2">
-                <div className="clinet_brand">
-                  <img src="assets/images/FPmZo.png" alt="" />
-                </div>
-              </div>
-              <div className="col-lg-2">
-                <div className="clinet_brand">
-                  <img src="assets/images/MGV5G.png" alt="" />
-                </div>
-              </div>
-              <div className="col-lg-2">
-                <div className="clinet_brand">
-                  <img src="assets/images/WKuV6.png" alt="" />
-                </div>
-              </div>
+                
+              })}
             </Slider>
           </div>
         </div>
