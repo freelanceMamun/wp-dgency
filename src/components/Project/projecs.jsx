@@ -54,7 +54,7 @@ const Project = () => {
   };
 
   return (
-    <div>
+    <div id="project">
       <section className="in_catagoiresInner">
         <div className="ind_catagories_container">
           <div className="container">
