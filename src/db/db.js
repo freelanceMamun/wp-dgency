@@ -5,11 +5,6 @@ import cimg3 from "../assets/images/Rectangle 646.png";
 
 // ========= Services data import Assets  images or icons
 
-import serimgOne from "../assets/images/Rectangle 725.png";
-import serimgTwo from "../assets/images/Rectangle 727.png";
-import serimgTheree from "../assets/images/Rectangle 700.png";
-import serimgFoure from "../assets/images/Rectangle 699.png";
-
 export const happyClient = [
   {
     id: 1,
@@ -112,5 +107,84 @@ export const servicesData = [
     serviceicon: "",
     serviceimg:
       "https://www.upwork.com/catalog-images/f10ba5936dc6085696afe3121402ffeb",
+  },
+];
+
+// ============ Belivers Meet  data
+
+import brandImg from "../assets/images/FPmZo.png";
+import brandImg1 from "../assets/images/MGV5G.png";
+import brandImg2 from "../assets/images/WKuV6.png";
+import brandImg3 from "../assets/images/FPmZo.png";
+
+export const dataMeet = [
+  {
+    id: 1,
+    img: brandImg,
+  },
+  {
+    id: 2,
+    img: brandImg1,
+  },
+  {
+    id: 3,
+    img: brandImg2,
+  },
+  {
+    id: 4,
+    img: brandImg3,
+  },
+  {
+    id: 5,
+    img: brandImg1,
+  },
+  {
+    id: 6,
+    img: brandImg2,
+  },
+];
+
+// ==========  Testimonials Section ========== Data import
+
+import TeamImg1 from "../assets/images/Rectangle 18 (2).png";
+import TeamImg2 from "../assets/images/Rectangle 19.png";
+import TeamImg3 from "../assets/images/Rectangle 18 (1).png";
+
+export const teamData = [
+  {
+    id: 1,
+    img: TeamImg1,
+    name: "Vanessa Laird",
+    Comment: "",
+  },
+  {
+    id: 2,
+    img: TeamImg2,
+    name: "Mason Campbell",
+    Comment: "",
+  },
+  {
+    id: 3,
+    img: TeamImg3,
+    name: "Irea Evans",
+    Comment: "",
+  },
+  {
+    id: 4,
+    img: "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg",
+    name: "Mason Campbell",
+    Comment: "",
+  },
+  {
+    id: 5,
+    img: "https://media.istockphoto.com/id/1364917563/photo/businessman-smiling-with-arms-crossed-on-white-background.jpg?s=612x612&w=0&k=20&c=NtM9Wbs1DBiGaiowsxJY6wNCnLf0POa65rYEwnZymrM=",
+    name: "John Doe",
+    Comment: "",
+  },
+  {
+    id: 6,
+    img: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1hbnxlbnwwfHwwfHx8MA%3D%3D",
+    name: "Alex Cary",
+    Comment: "",
   },
 ];

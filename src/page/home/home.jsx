@@ -1,40 +1,27 @@
 import "../../styles/index.css";
 import img1 from "../../assets/images/Rectangle 4.png";
 import Img32 from "../../assets/images/Rectangle 728.png";
-
 import CountUp from "react-countup";
 import MoreIcon from "../../assets/images/Learn More icon.png";
-import { happyClient, servicesData } from "../../db/db";
-import { useState, useRef, useEffect } from "react";
+import { happyClient, servicesData, teamData } from "../../db/db";
+import { useContext } from "react";
+import { MainContent } from "../../context/context";
+import Contact from "../../components/Contact/Contact";
+import SliderP from "../../components/Slider/partner/SliderP";
+import bgImg from "../../assets/images/Rectangle 730.png";
+import bgimg1 from "../../assets/images/adults-analysis-brainstorming-collaboration.jpg";
+
+import Team from "../../components/team/team";
+import Testimonials from "../../components/Testimonials/testimonials";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import About from "../../components/about/About";
 
 const Home = () => {
-  // ===== Show Services initial State =
-  const [show, setShow] = useState(6);
-  // =======  fade animation custom state
-  const [isVisible, setVisible] = useState(true);
-  // ============  Services Other Show Function ==========
-  const setShowFun = () => {
-    setShow((prev) => {
-      return prev + 6;
-    });
-  };
-
-  // =======  fade animation custom function
-
-  const domRef = useRef();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => setVisible(entry.isIntersecting));
-    });
-
-    observer.observe(domRef.current);
-
-    return () => observer.unobserve(domRef.current);
-  }, []);
+  const { domRef, isVisible, show, setShowFun } = useContext(MainContent);
 
   return (
-    <div className={` index-pages`} id="index_pages">
+    <div className={`index-pages`} id="index_pages">
       <section className="ind_hero_area">
         <div className="banner_container">
           <div
@@ -83,6 +70,12 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* A======== About Section  ========= */}
+
+      <About></About>
+
+      {/* ===== About Section end ====== */}
 
       {/* ===== Services Components ======  */}
 
@@ -138,7 +131,7 @@ const Home = () => {
                 </h1>
               </div>
             </div>
-            <div className="row mt-5 pt-3">
+            <div className="row mt-5 pt-3" ref={domRef}>
               {servicesData
                 .map((item) => {
                   return (
@@ -258,6 +251,27 @@ const Home = () => {
       </section>
 
       {/* ===== Services Components End ======  */}
+
+      {/* ================== */}
+
+      <SliderP backgroundImage={bgImg} headText={"Meet Our Belivers"}></SliderP>
+
+      {/* ==== Catagories  ======== */}
+
+      {/* ======== Catagories ===== */}
+
+      {/* ========= Team Section  ============ */}
+      <Team></Team>
+      {/* ========= Team Section  ============ */}
+
+      <SliderP backgroundImage={bgimg1} headText={"Technologies"}></SliderP>
+
+      <Testimonials teamData={teamData}></Testimonials>
+
+      {/* ===== Contact Section  ===== */}
+      <Contact></Contact>
+
+      {/* ===== Contact Section  ===== */}
     </div>
   );
 };

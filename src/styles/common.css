@@ -208,7 +208,7 @@ button:focus {
 /* ========= Footer  ========== */
 
 .footer_container {
-  background-image: url('/assets/images/Rectangle 472.png');
+  background-image: url('../assets//images/Rectangle 472.png');
   background-position: left;
   background-size: cover;
 }
