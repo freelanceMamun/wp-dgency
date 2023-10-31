@@ -28,6 +28,13 @@
     outline: none;
     border: none !important;
   }
+
+  header .nav_inner_desk .nav-link.active {
+    color: black !important;
+  }
+  header .nav_inner_desk .nav-link {
+    color: black !important;
+  }
 }
 
 @media screen and (min-width: 540px) and (max-width: 768px) {
@@ -58,6 +65,13 @@
   .toggleBtnNav {
     outline: none;
     border: none !important;
+  }
+
+  header .nav_inner_desk .nav-link.active {
+    color: black !important;
+  }
+  header .nav_inner_desk .nav-link {
+    color: black !important;
   }
 }
 
