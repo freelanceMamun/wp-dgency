@@ -31,7 +31,7 @@ var settings = {
   ],
 };
 
-const Team = () => {
+const Team = ({TeamMemberData}) => {
   return (
     <section className="Team_member">
       <div className="ind_team_member pt-3 pb-3">
@@ -49,11 +49,12 @@ const Team = () => {
           <div className="tema_member_inner">
             <div className="row mt-5 pt-4 team_memberSlide">
               <Slider {...settings}>
-                <div className="col-lg-4">
+                {TeamMemberData.map((item)=>{
+                  return <div className="col-lg-4">
                   <div className="tema_member_container">
                     <div className="tem-member_content">
                       <div className="images">
-                        <img src="assets/images/Mask (1).png" alt="" />
+                        <img src={item.img} alt="" />
                       </div>
                       <div className="member_content">
                         <h4>Mason Campbell</h4>
@@ -79,6 +80,8 @@ const Team = () => {
                     </div>
                   </div>
                 </div>
+                })}
+                
                 <div className="col-lg-4">
                   <div className="tema_member_container">
                     <div className="tem-member_content">

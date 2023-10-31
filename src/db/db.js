@@ -189,3 +189,44 @@ export const teamData = [
     Comment: "",
   },
 ];
+
+
+export const TeamMemberData = [
+  {
+    id: 1,
+    img: TeamImg1,
+    name: "Vanessa Laird",
+    Comment: "",
+  },
+  {
+    id: 2,
+    img: TeamImg2,
+    name: "Mason Campbell",
+    Comment: "",
+  },
+  {
+    id: 3,
+    img: TeamImg3,
+    name: "Irea Evans",
+    Comment: "",
+  },
+  {
+    id: 4,
+    img: "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg",
+    name: "Mason Campbell",
+    Comment: "",
+  },
+  {
+    id: 5,
+    img: "https://media.istockphoto.com/id/1364917563/photo/businessman-smiling-with-arms-crossed-on-white-background.jpg?s=612x612&w=0&k=20&c=NtM9Wbs1DBiGaiowsxJY6wNCnLf0POa65rYEwnZymrM=",
+    name: "John Doe",
+    Comment: "",
+  },
+  {
+    id: 6,
+    img: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1hbnxlbnwwfHwwfHx8MA%3D%3D",
+    name: "Alex Cary",
+    Comment: "",
+  },
+];
+

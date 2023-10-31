@@ -1,5 +1,7 @@
 import Slider from "react-slick";
+import { useContext } from "react";
 
+import { MainContent } from "../../context/context";
 var settings = {
   infinite: true,
   speed: 500,
@@ -19,6 +21,7 @@ var settings = {
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
+        autoplay: true,
       },
     },
     {
@@ -27,12 +30,17 @@ var settings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
+        autoplay: true,
       },
     },
   ],
 };
 
-const Testimonials = ({ teamData }) => {
+const Testimonials = ({ TeamMemberData }) => {
+  const { domRef, isVisible, show, setShowFun } = useContext(MainContent);
+
+
+
   return (
     <section className="clinet_review">
       <div className="client_review_container">
@@ -48,10 +56,12 @@ const Testimonials = ({ teamData }) => {
             </div>
           </div>
 
-          <div className="client_testimonials">
+          <div ref={domRef}  className={`fade-in-sectionOne ${
+                        isVisible ? "is-visibleOne" : ""
+                      } client_testimonials`}>
             <div className="row mt-5 pt-4 Client_memberSlide">
               <Slider {...settings}>
-                {teamData.map((item) => {
+                {TeamMemberData.map((item) => {
                   return (
                     <div key={item.id} className="col-lg-3">
                       <div className="tema_member_container">
