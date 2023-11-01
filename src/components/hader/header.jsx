@@ -3,7 +3,7 @@ import '../../styles/responsive.css';
 
 const Header = () => {
   return (
-    <header>
+    <header style={{background : "#000000"}}>
       <div className="nav_inner_desk">
         <div className="container">
           <div className="nav_main_container p-2">
