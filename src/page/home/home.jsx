@@ -100,18 +100,11 @@ const Home = () => {
                         <img src={clinet.img} alt="" />
                       </div>
                       <div className="pro_count">
-                        <CountUp start={0} duration="5" end={clinet.timer}>
-                          {({ countUpRef }) => {
-                            return (
-                              <div>
-                                <h3>
-                                  <span ref={countUpRef}></span>
-                                  <span>+</span>
-                                </h3>
-                              </div>
-                            );
-                          }}
-                        </CountUp>
+                        <div>
+                          <h3>
+                            <span>{clinet.timer}+</span>
+                          </h3>
+                        </div>
 
                         <p>{clinet.text}</p>
                       </div>
